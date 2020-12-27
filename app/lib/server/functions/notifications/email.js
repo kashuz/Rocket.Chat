@@ -143,7 +143,7 @@ export function getEmailData({
 		room,
 	});
 
-	const room_path = getButtonUrl(room, subscription, message);
+	const room_path = process.env.MESSAGE_LINK || getButtonUrl(room, subscription, message);
 
 	const receiverName = settings.get('UI_Use_Real_Name')
 		? receiver.name || receiver.username
