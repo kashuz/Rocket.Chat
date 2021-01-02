@@ -118,9 +118,9 @@ jobs:
       with:
         mongoDBVersion: "4.0"
 
-    - run: meteor npm run testunit
+#    - run: meteor npm run testunit
 
-    - run: meteor npm run typecheck
+#    - run: meteor npm run typecheck
 
     # To reduce memory need during actual build, build the packages solely first
     # - name: Build a Meteor cache
@@ -420,7 +420,7 @@ jobs:
         release: ["official", "preview"]
 
     env:
-      IMAGE: "rocketchat/rocket.chat"
+      IMAGE: "davronsherbaev/rocket-chat-fork"
 
     steps:
     - uses: actions/checkout@v2
